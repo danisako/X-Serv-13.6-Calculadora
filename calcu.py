@@ -11,29 +11,23 @@ num1 = float(sys.argv[2])
 num2 = float(sys.argv[3])
 
 
-
-try:
-
-	if 'suma' in operacion:
+if 'suma' in operacion:
 
 		print("La suma de",num1,"+",num2,"es",num1+num2)
-	else:
+if 'resta' in operacion:
 
-		if 'resta' in operacion:
 			print("La resta de",num1,"-",num2,"es",num1-num2)
+if 'multiplicacion' in operacion:
 
-	if 'multiplicacion' in operacion:
 		print("La multiplicación de",num1,"x",num2,"es",num1*num2)
 
-	else:
-		try:
-			if 'division' in operacion:
-				print("La división de",num1,"/",num2,"es",num1/num2)
-		except ZeroDivisionError:
-				print("No se puede dividir entre 0")
+try:
+	if 'division' in operacion:
+		print("La división de",num1,"/",num2,"es",num1/num2)
+except ZeroDivisionError:
+		print("No se puede dividir entre 0")
 
-except NameError:
-	print("Error")
+
 
 
             
